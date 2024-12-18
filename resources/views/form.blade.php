@@ -28,6 +28,18 @@
                                 <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
+                        <div>
+                            <label for="username" class="block text-sm font-medium text-gray-900">Nomor Rekam
+                                Medis</label>
+                            <div class="mt-2">
+                                <input type="number" maxlength="6" name="no_rm" id="username"
+                                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:outline-indigo-600 sm:text-sm"
+                                    placeholder="Nomor Rekam Medis" value="{{ old('no_rm') }}">
+                            </div>
+                            @error('no_rm')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
 
                         {{-- <div>
                             <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
@@ -117,7 +129,7 @@
                                     <label for="alergi-makanan" class="ml-2 text-sm text-gray-900">Makanan</label>
                                 </div>
                                 <div>
-                        <input id="alergi-debu" name="alergi[]" value="debu " type="checkbox"
+                                    <input id="alergi-debu" name="alergi[]" value="debu " type="checkbox"
                                         class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                     <label for="alergi-debu" class="ml-2 text-sm text-gray-900">Debu</label>
                                 </div>

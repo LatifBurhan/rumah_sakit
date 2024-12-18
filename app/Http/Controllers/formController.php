@@ -18,6 +18,7 @@ class formController extends Controller
             'alamat' => 'required',
             'alergi' => 'nullable',
             'golongan_darah' => 'required',
+            "no_rm" => "required|min:6|max:6"
         ], [
             'name.required' => 'Nama harus diisi.',
             'pendapatan.required' => 'Pendapatan harus diisi.',
@@ -25,6 +26,9 @@ class formController extends Controller
             'kota_id.required' => 'Kota harus dipilih.',
             'alamat.required' => 'Alamat lengkap harus diisi.',
             'golongan_darah.required' => 'Golongan darah harus dipilih.',
+            'no_rm.required' => 'No rekamedis wajib di isi',
+            'no_rm.min' => 'minimal 6',
+            'no_rm.max' => 'maximal 6',
         ]);
 
         // Proses pendapatan dan alergi
@@ -39,6 +43,7 @@ class formController extends Controller
             'provinsi_id' => $request->provinsi_id,
             'kota_id' => $request->kota_id,
             'pendapatan' => $pendapatan,
+            "no_rm" => $request->no_rm,
             'golongan_darah' => $request->golongan_darah,
         ]);
 

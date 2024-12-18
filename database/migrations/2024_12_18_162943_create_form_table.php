@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('form', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            // $table->string('no_rm')->unique()->nullable();
+            $table->string('no_rm')->unique();
             // $table->integer('nim_pasien')->nullable();
             $table->string('alamat');
             // $table->string('tgl_lahir')->nullable();
