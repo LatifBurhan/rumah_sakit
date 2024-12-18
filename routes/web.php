@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\formController;
 use App\Http\Controllers\loginController;
@@ -31,6 +32,9 @@ Route::post("/store/form", [formController::class, "store"])->name("form.store")
 
 Route::middleware(["auth"])->group(function() {
     Route::get("/dashboard", [dashboardController::class, "index"])->name("dashboard");
+    Route::get("/edit/{id}", [dashboardController::class, "edit"])->name("edit");
+    Route::put("/put/{id}", [formController::class, "update"])->name("update");
+    Route::delete("/delete/{id}", [dashboardController::class, "destroy"])->name("delete");
 });
 
 

@@ -13,18 +13,10 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::create([
-        //  'name' => 'John Doe',
-        //     'no_rm' => "1232132131321",
-        //     'nim_pasien' => 12345678,
-        //     'alamat' => 'Jl. Kebon Jeruk No. 123',
-        //     'tgl_lahir' => '1990-01-01',
-        //     'alergi' => 'Debu',
-        //     'kelamin' => 'Laki-laki',
-        //     'pendapatan' => '5000000',
-        //     'golongan_darah' => 'a',
-        //     'email' => 'johndoe@example.com',
-        //     'password' => Hash::make('password123'),
-        // ]);
+        User::create([
+             'name' => 'John Doe',
+            'email' => '123@example.com',
+            'password' => Hash::make('123'),
+        ]);
     }
 }
