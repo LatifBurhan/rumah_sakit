@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class kotaModel extends Model
+class formModel extends Model
 {
     use HasFactory;
-    protected $table = "kota";
+    protected $table = "form";
     protected $guarded = [];
 
     public function provinsi()
     {
-        return $this->belongsTo(provinsiModel::class, "provinsi_id", "id");
+        return $this->hasOne(provinsiModel::class, "provinsi_id");
     }
-    public function form()
+
+    public function kota()
     {
-        return $this->belongsTo(formModel::class, "id");
+        return $this->hasOne(kotaModel::class, "kota_id");
     }
-
-
 }

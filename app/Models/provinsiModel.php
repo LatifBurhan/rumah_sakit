@@ -15,4 +15,9 @@ class provinsiModel extends Model
     {
         return $this->hasOne(kotaModel::class, "id");
     }
+
+    public function form()
+    {
+        return $this->belongsTo(formModel::class, "id");
+    }
 }

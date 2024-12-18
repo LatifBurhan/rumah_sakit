@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\formController;
 use App\Http\Controllers\loginController;
+use App\Models\provinsiModel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $provinsi = provinsiModel::all();
+    return view('form', compact("provinsi"));
 });
+
+Route::post("/store/form", [formController::class, "store"])->name("form.store");
 
 
 

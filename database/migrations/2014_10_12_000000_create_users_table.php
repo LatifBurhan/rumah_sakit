@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('no_rm')->unique();
-            $table->integer('nim_pasien')->nullable();
-            $table->string('alamat');
-            $table->string('tgl_lahir');
-            $table->string('alergi');
-            $table->string('kelamin');
-            $table->string('pendapatan');
-            $table->enum('golongan_darah',["a","o","b","ab"]);
+            // $table->string('no_rm')->unique();
+            // $table->integer('nim_pasien')->nullable();
+            // $table->string('alamat');
+            // $table->string('tgl_lahir');
+            // $table->string('alergi');
+            // $table->string('kelamin');
+            // $table->string('pendapatan');
+            // $table->enum('golongan_darah',["a","o","b","ab"]);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
